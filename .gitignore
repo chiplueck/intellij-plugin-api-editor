@@ -1,0 +1,26 @@
+Thumbs.db
+package-lock.json
+.DS_Store
+.gradle
+work/
+client/dist/
+client/node_modules/
+client/tests/screens/
+client/tests/tests_output/
+out/
+scratch/
+.idea
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+run_dev
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+/build/
+/.idea/

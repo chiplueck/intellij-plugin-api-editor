@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.2'
+    id 'wrapper'
+}
+
+wrapper {
+    gradleVersion = '8.5'
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+intellij {
+    type = 'IU'  // IU for Ultimate
+    //localPath = new File('/home/chip/idea').absolutePath
+    version='2025.1'
+    updateSinceUntilBuild = true
+    downloadSources = false
+    instrumentCode = true
+
+    // Additional configuration to fix IndexOutOfBoundsException
+    ideaDependencyCachePath = "${project.buildDir}/idea-dependency-cache"
+    sandboxDir = "${project.buildDir}/idea-sandbox"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+// Disable buildSearchableOptions task to avoid IndexOutOfBoundsException
+buildSearchableOptions {
+    enabled = false
+}
+
+// Create a custom task to replace runIde
+task customRunIde(type: JavaExec) {
+    description = 'Runs the IDE with the plugin installed (custom implementation)'
+    group = 'intellij'
+
+    dependsOn prepareSandbox
+
+    classpath = files("${project.buildDir}/idea-sandbox")
+    mainClass = 'com.intellij.idea.Main'
+
+    // Set system properties
+    systemProperty('idea.plugins.path', "${project.buildDir}/idea-sandbox/plugins")
+    systemProperty('idea.system.path', "${project.buildDir}/idea-sandbox/system")
+    systemProperty('idea.config.path', "${project.buildDir}/idea-sandbox/config")
+    systemProperty('idea.log.path', "${project.buildDir}/idea-sandbox/system/log")
+
+    // Set JVM arguments
+    jvmArgs = [
+        '-Xmx2g',
+        '-Djdk.module.illegalAccess.silent=true',
+        '-Didea.is.internal=true'
+    ]
+}

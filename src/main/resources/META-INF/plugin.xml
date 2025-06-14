@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.example.apieditor</id>
+    <name>API Editor</name>
+    <vendor email="chip.lueck@gmail.com" url="http://chiplueck.com">Chip Lueck</vendor>
+
+    <description><![CDATA[
+    A plugin that allows reading and writing code from a remote API source, similar to the remote host feature but using an API instead of SFTP.
+    <br>
+    Features:
+    <ul>
+        <li>Configure API endpoints with secure credential storage</li>
+        <li>Browse and edit remote code via API</li>
+        <li>Support for various file types based on file extensions</li>
+    </ul>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="com.example.apieditor.services.ApiEndpointService"/>
+        <applicationConfigurable parentId="tools"
+                                 instance="com.example.apieditor.settings.ApiEditorConfigurable"
+                                 id="com.example.apieditor.settings.ApiEditorConfigurable"
+                                 displayName="API Editor Settings"/>
+    </extensions>
+
+    <actions>
+        <group id="ApiEditor.ToolsMenu" text="API Editor" description="API Editor plugin menu">
+            <action id="ApiEditor.Connect.Tools"
+                    class="com.example.apieditor.actions.ConnectAction"
+                    text="API Editor Program List"
+                    description="Connect to a configured API endpoint"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+    </actions>
+
+</idea-plugin>
