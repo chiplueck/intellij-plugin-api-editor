@@ -1,4 +1,4 @@
-package com.example.apieditor.model;
+package com.chiplueck.apieditor.model;
 
 import java.util.Objects;
 

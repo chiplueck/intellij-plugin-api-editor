@@ -1,9 +1,9 @@
-package com.example.apieditor.fs;
+package com.chiplueck.apieditor.fs;
 
-import com.example.apieditor.api.ApiClient;
-import com.example.apieditor.api.HttpApiClient;
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.model.RemoteProgram;
+import com.chiplueck.apieditor.api.ApiClient;
+import com.chiplueck.apieditor.api.HttpApiClient;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.model.RemoteProgram;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.Service;
 import com.intellij.openapi.diagnostic.Logger;

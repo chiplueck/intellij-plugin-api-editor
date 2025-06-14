@@ -1,6 +1,6 @@
-package com.example.apieditor.services;
+package com.chiplueck.apieditor.services;
 
-import com.example.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.model.ApiEndpoint;
 import com.intellij.credentialStore.CredentialAttributes;
 import com.intellij.credentialStore.CredentialAttributesKt;
 import com.intellij.credentialStore.Credentials;

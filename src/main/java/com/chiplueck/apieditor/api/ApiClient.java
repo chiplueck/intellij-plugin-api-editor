@@ -1,6 +1,6 @@
-package com.example.apieditor.api;
+package com.chiplueck.apieditor.api;
 
-import com.example.apieditor.model.RemoteProgram;
+import com.chiplueck.apieditor.model.RemoteProgram;
 
 import java.io.IOException;
 import java.util.List;

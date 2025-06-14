@@ -1,11 +1,11 @@
-package com.example.apieditor.actions;
+package com.chiplueck.apieditor.actions;
 
-import com.example.apieditor.api.ApiClient;
-import com.example.apieditor.api.HttpApiClient;
-import com.example.apieditor.fs.ApiEditorFileSystem;
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.model.RemoteProgram;
-import com.example.apieditor.services.ApiEndpointService;
+import com.chiplueck.apieditor.api.ApiClient;
+import com.chiplueck.apieditor.api.HttpApiClient;
+import com.chiplueck.apieditor.fs.ApiEditorFileSystem;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.model.RemoteProgram;
+import com.chiplueck.apieditor.services.ApiEndpointService;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
@@ -18,7 +18,6 @@ import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.PopupStep;
 import com.intellij.openapi.ui.popup.util.BaseListPopupStep;
-import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

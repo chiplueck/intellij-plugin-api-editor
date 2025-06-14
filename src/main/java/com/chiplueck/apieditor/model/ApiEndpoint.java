@@ -1,4 +1,4 @@
-package com.example.apieditor.model;
+package com.chiplueck.apieditor.model;
 
 import com.intellij.util.xmlb.annotations.Transient;
 import java.util.Objects;

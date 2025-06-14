@@ -1,4 +1,4 @@
-package com.example.apieditor.fs;
+package com.chiplueck.apieditor.fs;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.Service;

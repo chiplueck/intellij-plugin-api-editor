@@ -1,17 +1,15 @@
-package com.example.apieditor.api;
+package com.chiplueck.apieditor.api;
 
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.model.RemoteProgram;
-import com.example.apieditor.services.ApiEndpointService;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.model.RemoteProgram;
+import com.chiplueck.apieditor.services.ApiEndpointService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 import com.intellij.openapi.diagnostic.Logger;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;

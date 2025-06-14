@@ -1,13 +1,12 @@
-package com.example.apieditor.settings;
+package com.chiplueck.apieditor.settings;
 
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.services.ApiEndpointService;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.services.ApiEndpointService;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.ValidationInfo;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.util.ui.FormBuilder;
-import com.intellij.util.ui.UI;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;

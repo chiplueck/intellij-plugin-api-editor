@@ -1,12 +1,10 @@
-package com.example.apieditor.settings;
+package com.chiplueck.apieditor.settings;
 
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.services.ApiEndpointService;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.services.ApiEndpointService;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.openapi.ui.Messages;
-import com.intellij.ui.AddEditDeleteListPanel;
 import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.components.JBList;
 import org.jetbrains.annotations.Nls;
@@ -16,7 +14,6 @@ import javax.swing.*;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.example.apieditor</id>
+    <id>com.chiplueck.editor</id>
     <name>API Editor</name>
     <vendor email="chip.lueck@gmail.com" url="http://chiplueck.com">Chip Lueck</vendor>
 
@@ -14,24 +14,21 @@
     </ul>
     ]]></description>
 
-    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-        <applicationService serviceImplementation="com.example.apieditor.services.ApiEndpointService"/>
+        <applicationService serviceImplementation="com.chiplueck.apieditor.services.ApiEndpointService"/>
         <applicationConfigurable parentId="tools"
-                                 instance="com.example.apieditor.settings.ApiEditorConfigurable"
-                                 id="com.example.apieditor.settings.ApiEditorConfigurable"
+                                 instance="com.chiplueck.apieditor.settings.ApiEditorConfigurable"
+                                 id="com.chiplueck.apieditor.settings.ApiEditorConfigurable"
                                  displayName="API Editor Settings"/>
     </extensions>
 
     <actions>
         <group id="ApiEditor.ToolsMenu" text="API Editor" description="API Editor plugin menu">
             <action id="ApiEditor.Connect.Tools"
-                    class="com.example.apieditor.actions.ConnectAction"
+                    class="com.chiplueck.apieditor.actions.ConnectAction"
                     text="API Editor Program List"
                     description="Connect to a configured API endpoint"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>

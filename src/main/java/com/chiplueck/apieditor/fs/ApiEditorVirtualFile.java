@@ -1,7 +1,7 @@
-package com.example.apieditor.fs;
+package com.chiplueck.apieditor.fs;
 
-import com.example.apieditor.model.ApiEndpoint;
-import com.example.apieditor.model.RemoteProgram;
+import com.chiplueck.apieditor.model.ApiEndpoint;
+import com.chiplueck.apieditor.model.RemoteProgram;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.fileTypes.FileTypeManager;
 import com.intellij.openapi.vfs.VirtualFile;
